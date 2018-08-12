@@ -4,6 +4,15 @@
   "bin": {
     "gromit": "./cli.js"
   },
+  "keywords": [
+    "css",
+    "stats",
+    "analytics",
+    "analysis",
+    "test",
+    "assert",
+    "treshold"
+  ],
   "dependencies": {
     "@projectwallace/css-analyzer": "^1.1.0",
     "flat": "^4.1.0",
