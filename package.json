@@ -1,0 +1,28 @@
+{
+  "name": "@bartveneman/gromit",
+  "version": "0.1.0",
+  "bin": {
+    "gromit": "./cli.js"
+  },
+  "dependencies": {
+    "@projectwallace/css-analyzer": "^1.1.0",
+    "flat": "^4.1.0",
+    "get-stdin": "^6.0.0",
+    "is-array": "^1.0.1",
+    "is-number": "^7.0.0",
+    "log-symbols": "^2.2.0",
+    "meow": "^5.0.0",
+    "tap": "^12.0.1",
+    "unique-random-array": "^1.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "xo": "^0.22.0"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "semicolon": false
+  }
+}
