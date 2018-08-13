@@ -21,6 +21,9 @@
     "is-number": "^7.0.0",
     "log-symbols": "^2.2.0",
     "meow": "^5.0.0",
+    "parse-json": "^4.0.0",
+    "path-exists": "^3.0.0",
+    "strip-json-comments": "^2.0.1",
     "tap": "^12.0.1",
     "unique-random-array": "^1.0.1"
   },
