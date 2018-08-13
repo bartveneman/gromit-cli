@@ -9,10 +9,17 @@ const analyzeCss = require('@projectwallace/css-analyzer')
 const logSymbols = require('log-symbols')
 const getStdin = require('get-stdin')
 const meow = require('meow')
+const stripJsonComments = require('strip-json-comments')
+const parseJson = require('parse-json')
+const pathExists = require('path-exists')
 
 const flattenStats = require('./lib/flatten-stats.js')
 const {ok: successMessage, error: failureMessage} = require('./lib/messages.js')
 const runTests = require('./lib/test-runner.js')
+
+const TEST_SUCCESS_CODE = 0
+const TEST_FAILURE_CODE = 1
+const APPLICATION_ERROR_CODE = 2
 
 const readFilePromise = promisify(readFile)
 const cli = meow(
@@ -48,11 +55,27 @@ if (!filePath && process.stdin.isTTY) {
 }
 
 // Use either the CLI file argument or StdIn
-const css = filePath ? readFilePromise(resolve(filePath)) : getStdin()
+const cssFile = filePath ? readFilePromise(resolve(filePath)) : getStdin()
+
+pathExists(cli.flags.config).then(exists => {
+	if (!exists) {
+		console.log(
+			'\n',
+			logSymbols.error,
+			'Please provide a valid config file by creating a .gromitrc file or setting the path to a config file via the --config= flag. \n\nDocs: https://github.com/bartveneman/gromit#config-file'
+		)
+		process.exit(APPLICATION_ERROR_CODE)
+	}
+})
+
+const configFile = readFilePromise(resolve(cli.flags.config), 'utf8')
 
 // Read input and config
-Promise.all([css, readFilePromise(resolve(cli.flags.config), 'utf8')])
-	.then(([css, config]) => ({css, config: JSON.parse(config)}))
+Promise.all([cssFile, configFile])
+	.then(([css, config]) => ({
+		css,
+		config: parseJson(stripJsonComments(config))
+	}))
 
 	// Generate CSS stats from CSS input
 	.then(async input => ({...input, stats: await analyzeCss(input.css)}))
@@ -68,15 +91,21 @@ Promise.all([css, readFilePromise(resolve(cli.flags.config), 'utf8')])
 
 	// Send the result to the user
 	.then(testsPassed => {
-		process.exit(testsPassed ? 0 : 1)
+		process.exit(testsPassed ? TEST_SUCCESS_CODE : TEST_FAILURE_CODE)
+	})
+	.catch(error => {
+		console.log('\n', error)
+		process.exit(APPLICATION_ERROR_CODE)
 	})
 
 // Tell the user whether the tests have passed or not
 // and exit with a proper exit code
 process.on('exit', code => {
-	if (code !== 0) {
-		return console.log('\n', logSymbols.error, `"${failureMessage()}"`)
+	if (code === TEST_FAILURE_CODE) {
+		return console.log(logSymbols.error, `"${failureMessage()}"`)
 	}
 
-	return console.log('\n', logSymbols.success, `"${successMessage()}"`)
+	if (code === TEST_SUCCESS_CODE) {
+		return console.log(logSymbols.success, `"${successMessage()}"`)
+	}
 })
