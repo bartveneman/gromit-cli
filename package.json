@@ -1,5 +1,5 @@
 {
-  "name": "@bartveneman/gromit",
+  "name": "gromit-cli",
   "version": "0.2.0",
   "bin": {
     "gromit": "./cli.js"

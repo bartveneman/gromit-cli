@@ -46,8 +46,8 @@ also specify a different JSON config file with the `--config` option
 
 ```json
 {
-	// Do not exceed 4095, otherwise IE will drop any subsequent rules
-	"rules.total": 4095,
+	// Do not exceed 4095, otherwise IE9 will drop any subsequent rules
+	"selectors.total": 4095,
 	"selectors.id.total": 0,
 	"values.colors.totalUnique": 2,
 	"values.colors.unique": ["#fff", "#000"]
