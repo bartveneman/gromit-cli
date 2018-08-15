@@ -11,7 +11,9 @@
     "analysis",
     "test",
     "assert",
-    "treshold"
+    "treshold",
+    "wallace",
+    "projectwallace"
   ],
   "dependencies": {
     "@projectwallace/css-analyzer": "^1.1.0",
