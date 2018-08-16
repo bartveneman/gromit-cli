@@ -30,6 +30,8 @@ const cli = meow(
 
 	Options
 		--config, -c Set path to a Gromit config file (JSON)
+		--help, -h Show this help
+		--version, -v Show the version number
 
 	Examples
 		$ gromit style.css
@@ -38,6 +40,9 @@ const cli = meow(
 `,
 	{
 		flags: {
+			version: {
+				alias: 'v'
+			},
 			config: {
 				type: 'string',
 				default: '.gromitrc'
