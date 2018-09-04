@@ -15,7 +15,7 @@ Gromit relies on you passing in CSS and a config.
 $ gromit style.css
 
 # Custom config
-$ gromit style.css --config=my-config.json
+$ gromit style.css --config my-config.json
 
 # Read from StdIn
 $ cat style.css | gromit
