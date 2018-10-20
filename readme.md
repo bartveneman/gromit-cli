@@ -1,8 +1,8 @@
 # Gromit
 
-A test framework to assert that CSS doesn't exceeds certain tresholds.
+A test framework to assert that CSS doesn't exceeds certain thresholds.
 
-- Provide a [config file](#config-file) with tresholds to check
+- Provide a [config file](#config-file) with thresholds to check
 - Pass in the CSS
 - Gromit will let you know whether your CSS passes the test
 
@@ -98,6 +98,12 @@ Example usage with package.json:
 - [CSS Analyzer](https://github.com/projectwallace/css-analyzer) - The analyzer
   that powers this module
 - [Wallace](https://github.com/bartveneman/wallace-cli) - CLI tool for
-  @projectwallace/css-analyzer .
+  @projectwallace/css-analyzer
 - [CSS Analyzer Diff](https://github.com/bartveneman/css-analyzer-diff) -
   Calculates the diff between two sets of CSS analysis
+- [Color Sorter](https://github.com/bartveneman/color-sorter) - Sort CSS colors
+  by hue, saturation, lightness and opacity
+
+## License
+
+MIT © Bart Veneman
