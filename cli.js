@@ -77,9 +77,9 @@ const configFile = readFilePromise(resolve(cli.flags.config), 'utf8')
 
 // Read input and config
 Promise.all([cssFile, configFile])
-	.then(([css, config]) => ({
+	.then(([css, configJson]) => ({
 		css,
-		config: parseJson(stripJsonComments(config))
+		config: parseJson(stripJsonComments(configJson), cli.flags.config)
 	}))
 
 	// Generate CSS stats from CSS input
@@ -99,7 +99,7 @@ Promise.all([cssFile, configFile])
 		process.exit(testsPassed ? TEST_SUCCESS_CODE : TEST_FAILURE_CODE)
 	})
 	.catch(error => {
-		console.log('\n', error)
+		console.log('\n', logSymbols.error, error.message)
 		process.exit(APPLICATION_ERROR_CODE)
 	})
 
