@@ -4,7 +4,7 @@
 /* eslint-disable unicorn/no-process-exit */
 const {readFile} = require('fs')
 const {promisify} = require('util')
-const {resolve} = require('path')
+const {resolve: resolvePath} = require('path')
 const analyzeCss = require('@projectwallace/css-analyzer')
 const logSymbols = require('log-symbols')
 const getStdin = require('get-stdin')
@@ -60,7 +60,7 @@ if (!filePath && process.stdin.isTTY) {
 }
 
 // Use either the CLI file argument or StdIn
-const cssFile = filePath ? readFilePromise(resolve(filePath)) : getStdin()
+const cssFile = filePath ? readFilePromise(resolvePath(filePath)) : getStdin()
 
 pathExists(cli.flags.config).then(exists => {
 	if (!exists) {
@@ -73,7 +73,7 @@ pathExists(cli.flags.config).then(exists => {
 	}
 })
 
-const configFile = readFilePromise(resolve(cli.flags.config), 'utf8')
+const configFile = readFilePromise(resolvePath(cli.flags.config), 'utf8')
 
 // Read input and config
 Promise.all([cssFile, configFile])
