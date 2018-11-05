@@ -1,6 +1,8 @@
 {
   "name": "gromit-cli",
   "version": "0.5.0",
+  "homepage": "https://www.projectwallace.com/oss",
+  "description": "A test framework to assert that CSS doesn't exceed provided thresholds.",
   "bin": {
     "gromit": "./cli.js"
   },
@@ -16,7 +18,7 @@
     "projectwallace"
   ],
   "dependencies": {
-    "@projectwallace/css-analyzer": "^1.5.0",
+    "@projectwallace/css-analyzer": "^1.5.1",
     "flat": "^4.1.0",
     "get-stdin": "^6.0.0",
     "is-array": "^1.0.1",

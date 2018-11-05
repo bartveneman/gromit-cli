@@ -1,6 +1,6 @@
-# Gromit
+# Gromit [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/gromit-cli/badge.svg)](https://snyk.io/test/github/bartveneman/gromit-cli) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-A test framework to assert that CSS doesn't exceeds certain thresholds.
+A test framework to assert that CSS doesn't exceed provided thresholds.
 
 - Provide a [config file](#config-file) with thresholds to check
 - Pass in the CSS
