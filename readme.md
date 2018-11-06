@@ -1,4 +1,4 @@
-# Gromit [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/gromit-cli/badge.svg)](https://snyk.io/test/github/bartveneman/gromit-cli) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+# Gromit [![Build Status](https://travis-ci.com/bartveneman/gromit-cli.svg?branch=master)](https://travis-ci.com/bartveneman/gromit-cli) [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/gromit-cli/badge.svg)](https://snyk.io/test/github/bartveneman/gromit-cli) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 A test framework to assert that CSS doesn't exceed provided thresholds.
 
