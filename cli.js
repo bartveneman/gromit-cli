@@ -35,7 +35,7 @@ const cli = meow(
 
 	Examples
 		$ gromit style.css
-		$ gromit style.css --config=/path/to/.gromitrc
+		$ gromit style.css --config /path/to/.gromitrc
 		$ cat style.css | gromit
 `,
 	{
@@ -52,7 +52,7 @@ const cli = meow(
 )
 
 // Read the filepath from the CLI
-const filePath = cli.input[0]
+const [filePath] = cli.input
 
 // Show the help if there is no file argument
 if (!filePath && process.stdin.isTTY) {

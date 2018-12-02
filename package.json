@@ -6,6 +6,8 @@
   "bin": {
     "gromit": "./cli.js"
   },
+  "repository": "bartveneman/gromit-cli",
+  "license": "MIT",
   "keywords": [
     "css",
     "stats",
@@ -32,11 +34,13 @@
     "unique-random-array": "^1.0.1"
   },
   "devDependencies": {
+    "ava": "^1.0.0-rc.2",
+    "execa": "^1.0.0",
     "prettier": "^1.14.3",
     "xo": "^0.23.0"
   },
   "scripts": {
-    "test": "xo"
+    "test": "xo && ava"
   },
   "xo": {
     "semicolon": false
