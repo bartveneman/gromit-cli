@@ -1,6 +1,6 @@
 {
   "name": "gromit-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://www.projectwallace.com/oss",
   "description": "A test framework to assert that CSS doesn't exceed provided thresholds.",
   "bin": {
