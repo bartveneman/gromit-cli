@@ -40,3 +40,16 @@ test('it fails when css exceeds config settings', async t => {
 		t.false(error.stdout.includes('✔'))
 	}
 })
+
+test('it fails when an unknown config option is used', async t => {
+	try {
+		await execa('./cli.js', ['--config', 'test/fixture-unknown-option.json'], {
+			input: 'html {}'
+		})
+	} catch (error) {
+		t.is(error.code, 1)
+		t.true(error.stdout.includes('not ok'))
+		t.false(error.stdout.includes('✔'))
+		t.true(error.stdout.includes('Is your config correct?'))
+	}
+})
