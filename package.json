@@ -35,7 +35,7 @@
     "unique-random-array": "^1.0.1"
   },
   "devDependencies": {
-    "ava": "^1.0.0-rc.2",
+    "ava": "^1.0.1",
     "execa": "^1.0.0",
     "prettier": "^1.14.3",
     "semver": "^5.6.0",
