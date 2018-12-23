@@ -57,7 +57,7 @@
 	"selectors.identifiers.average": 1,
 	// "selectors.identifiers.top": [{"count": 1, "value": "body"}],
 	"selectors.identifiers.max.count": 1,
-	// "selectors.identifiers.max.value": "foo",
+	"selectors.identifiers.max.value": "body",
 	"selectors.js.total": 0,
 	"selectors.js.totalUnique": 0,
 	"selectors.js.unique": [],
