@@ -1,14 +1,15 @@
 const test = require('ava')
 const execa = require('execa')
+const semver = require('semver')
 
-test('it shows the version when passing -v', async t => {
+test('it shows a valid version when passing -v', async t => {
 	const {stdout} = await execa('./cli.js', ['-v'])
-	t.is(stdout, '1.0.0')
+	t.is(stdout, semver.valid(stdout))
 })
 
-test('it shows the version when passing --version', async t => {
+test('it shows a valid version when passing --version', async t => {
 	const {stdout} = await execa('./cli.js', ['--version'])
-	t.is(stdout, '1.0.0')
+	t.is(stdout, semver.valid(stdout))
 })
 
 test('it passes when given a valid config and css file', async t => {
