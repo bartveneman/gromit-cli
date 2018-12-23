@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 'use strict'
 
-/* eslint-disable unicorn/no-process-exit */
 const {readFile} = require('fs')
 const {promisify} = require('util')
 const {resolve: resolvePath} = require('path')
@@ -51,7 +50,7 @@ const cli = meow(
 	}
 )
 
-// Read the filepath from the CLI
+// Read the file path from the CLI
 const [filePath] = cli.input
 
 // Show the help if there is no file argument
