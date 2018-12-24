@@ -51,6 +51,10 @@ test('it fails when an unknown config option is used', async t => {
 		t.is(error.code, 1)
 		t.true(error.stdout.includes('not ok'))
 		t.false(error.stdout.includes('✔'))
-		t.true(error.stdout.includes('Is your config correct?'))
+		t.true(
+			error.stdout.includes(
+				`Could not assert 'stylesheet.size'. Did you mean 'stylesheets.size'?`
+			)
+		)
 	}
 })
