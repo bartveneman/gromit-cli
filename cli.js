@@ -11,6 +11,7 @@ const meow = require('meow')
 const stripJsonComments = require('strip-json-comments')
 const parseJson = require('parse-json')
 const pathExists = require('path-exists')
+const updateNotifier = require('update-notifier')
 
 const flattenStats = require('./lib/flatten-stats.js')
 const {ok: successMessage, error: failureMessage} = require('./lib/messages.js')
@@ -49,6 +50,8 @@ const cli = meow(
 		}
 	}
 )
+
+updateNotifier({pkg: cli.pkg}).notify()
 
 // Read the file path from the CLI
 const [filePath] = cli.input
