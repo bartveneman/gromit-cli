@@ -8,17 +8,17 @@ A test framework to assert that CSS doesn't exceed provided thresholds.
 
 ## Usage
 
-Gromit relies on you passing in CSS and a config.
+Gromit needs CSS input and a config file.
 
 ```sh
-# Default usage
+# Default usage (assuming a .gromitrc file in the current directory)
 $ gromit style.css
+
+# Read from StdIn (assuming a .gromitrc file in the current directory)
+$ cat style.css | gromit
 
 # Custom config
 $ gromit style.css --config my-config.json
-
-# Read from StdIn
-$ cat style.css | gromit
 ```
 
 The result will look like something like this:
