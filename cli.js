@@ -21,6 +21,8 @@ const TEST_SUCCESS_CODE = 0
 const TEST_FAILURE_CODE = 1
 const APPLICATION_ERROR_CODE = 2
 
+process.env.TAP_DEV_SHORTSTACK = '1'
+
 const readFilePromise = promisify(readFile)
 const cli = meow(
 	`
