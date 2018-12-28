@@ -355,7 +355,7 @@ ok 70 - stylesheets.cohesion.average # time=0.916ms
 ok 71 - stylesheets.simplicity # time=1.336ms
 
 # Subtest: stylesheets.size
-    ok 1 - stylesheets.size should not be larger than 21 (actual: 21)
+    ok 1 - stylesheets.size should not be larger than 23 (actual: 23)
     1..1
 ok 72 - stylesheets.size # time=1.383ms
 
