@@ -71,7 +71,7 @@ pathExists(cli.flags.config).then(exists => {
 		console.log(
 			'\n',
 			logSymbols.error,
-			'Please provide a valid config file by creating a .gromitrc file or setting the path to a config file via the --config= flag. \n\nDocs: https://github.com/bartveneman/gromit-cli#config-file'
+			'Please provide a valid config file by creating a .gromitrc file or setting the path to a config file via the --config flag. \n\nDocs: https://github.com/bartveneman/gromit-cli#config-file'
 		)
 		process.exit(APPLICATION_ERROR_CODE)
 	}
