@@ -1,9 +1,5 @@
-const {promisify} = require('util')
-const fs = require('fs')
 const test = require('ava')
 const execa = require('execa')
-
-const readFile = promisify(fs.readFile)
 
 test('it shows an alternative assertion if a given one in the config cannot be found', async t => {
 	const {stdout: actual} = await t.throwsAsync(
