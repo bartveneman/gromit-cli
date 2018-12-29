@@ -1,17 +1,25 @@
+const {promisify} = require('util')
+const fs = require('fs')
 const test = require('ava')
 const execa = require('execa')
 
-test('it shows a help message when called without arguments', async t => {
-	const {stdout} = await execa('./cli.js')
-	// validate help message
-})
+const readFile = promisify(fs.readFile)
 
 test('it shows a help message when called with --help', async t => {
-	const {stdout} = await execa('./cli.js', ['--help'])
-	// validate help message
-})
+	const [{stdout: actual, code: exitCode}, expected] = await Promise.all([
+		execa('./cli.js', ['--help']),
+		readFile('./test/help/expected.txt', {encoding: 'utf8'})
+	])
 
-test('it shows a help message when called with -h', async t => {
-	const {stdout} = await execa('./cli.js', ['-h'])
-	// validate help message
+	t.deepEqual(
+		actual
+			.split('\n')
+			.map(line => line.trim())
+			.filter(line => Boolean(line)),
+		expected
+			.split('\n')
+			.map(line => line.trim())
+			.filter(line => Boolean(line))
+	)
+	t.is(exitCode, 0)
 })
