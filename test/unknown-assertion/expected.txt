@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: stylesheet.size
+    not ok 1 - Could not assert 'stylesheet.size'. Did you mean 'stylesheets.size'?
+      ---
+      at:
+        line: 29
+        column: 11
+        file: lib/test-runner.js
+        type: Test
+        function: tap.test.test
+      stack: |
+        Test.tap.test.test (lib/test-runner.js:29:11)
+        Object.entries.map (lib/test-runner.js:23:8)
+        Array.map (<anonymous>)
+        module.exports (lib/test-runner.js:17:32)
+        Promise.all.then.then.then.then.input (cli.js:96:17)
+      source: |
+        test.fail(
+      ...
+    
+    1..1
+    # failed 1 test
+not ok 1 - stylesheet.size # time=31.346ms
+
+1..1
+# failed 1 test
+# time=38.632ms
+✖ "Er, Gromit, old pal? It happened again. I'll need assistance."
