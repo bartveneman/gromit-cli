@@ -5,7 +5,7 @@ const {readFile} = require('fs')
 const {promisify} = require('util')
 const {resolve: resolvePath} = require('path')
 const analyzeCss = require('@projectwallace/css-analyzer')
-const logSymbols = require('log-symbols')
+const {error: errorSymbol, success: successSymbol} = require('log-symbols')
 const getStdin = require('get-stdin')
 const meow = require('meow')
 const stripJsonComments = require('strip-json-comments')
@@ -14,14 +14,20 @@ const pathExists = require('path-exists')
 const updateNotifier = require('update-notifier')
 
 const flattenStats = require('./lib/flatten-stats.js')
-const {ok: successMessage, error: failureMessage} = require('./lib/messages.js')
+const {
+	ok: successMessage,
+	error: failureMessage,
+	INVALID_OR_MISSING_CONFIG_FILE
+} = require('./lib/messages.js')
 const runTests = require('./lib/test-runner.js')
 
-const TEST_SUCCESS_CODE = 0
-const TEST_FAILURE_CODE = 1
-const APPLICATION_ERROR_CODE = 2
+const {
+	TEST_SUCCESS_CODE,
+	TEST_FAILURE_CODE,
+	APPLICATION_ERROR_CODE
+} = require('./lib/exit-codes.js')
 
-const readFilePromise = promisify(readFile)
+const readFileAsync = promisify(readFile)
 const cli = meow(
 	`
 	Usage
@@ -30,7 +36,7 @@ const cli = meow(
 
 	Options
 		--config, -c Set path to a Gromit config file (JSON)
-		--help, -h Show this help
+		--help Show this help
 		--version, -v Show the version number
 
 	Examples
@@ -62,20 +68,16 @@ if (!filePath && process.stdin.isTTY) {
 }
 
 // Use either the CLI file argument or StdIn
-const cssFile = filePath ? readFilePromise(resolvePath(filePath)) : getStdin()
+const cssFile = filePath ? readFileAsync(resolvePath(filePath)) : getStdin()
 
 pathExists(cli.flags.config).then(exists => {
 	if (!exists) {
-		console.log(
-			'\n',
-			logSymbols.error,
-			'Please provide a valid config file by creating a .gromitrc file or setting the path to a config file via the --config= flag. \n\nDocs: https://github.com/bartveneman/gromit#config-file'
-		)
+		console.log('\n', errorSymbol, INVALID_OR_MISSING_CONFIG_FILE)
 		process.exit(APPLICATION_ERROR_CODE)
 	}
 })
 
-const configFile = readFilePromise(resolvePath(cli.flags.config), 'utf8')
+const configFile = readFileAsync(resolvePath(cli.flags.config), 'utf8')
 
 // Read input and config
 Promise.all([cssFile, configFile])
@@ -101,7 +103,7 @@ Promise.all([cssFile, configFile])
 		process.exit(testsPassed ? TEST_SUCCESS_CODE : TEST_FAILURE_CODE)
 	})
 	.catch(error => {
-		console.log('\n', logSymbols.error, error.message)
+		console.log('\n', errorSymbol, error.message)
 		process.exit(APPLICATION_ERROR_CODE)
 	})
 
@@ -109,10 +111,10 @@ Promise.all([cssFile, configFile])
 // and exit with a proper exit code
 process.on('exit', code => {
 	if (code === TEST_FAILURE_CODE) {
-		return console.log(logSymbols.error, `"${failureMessage()}"`)
+		return console.log(errorSymbol, `"${failureMessage()}"`)
 	}
 
 	if (code === TEST_SUCCESS_CODE) {
-		return console.log(logSymbols.success, `"${successMessage()}"`)
+		return console.log(successSymbol, `"${successMessage()}"`)
 	}
 })

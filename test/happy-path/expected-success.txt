@@ -1,0 +1,474 @@
+TAP version 13
+# Subtest: atrules.charsets.total
+    ok 1 - atrules.charsets.total should not be larger than 0 (actual: 0)
+    1..1
+ok 1 - atrules.charsets.total # time=8.47ms
+
+# Subtest: atrules.charsets.totalUnique
+    ok 1 - atrules.charsets.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 2 - atrules.charsets.totalUnique # time=1.941ms
+
+# Subtest: atrules.charsets.unique
+    ok 1 - should be equal
+    1..1
+ok 3 - atrules.charsets.unique # time=1.506ms
+
+# Subtest: atrules.documents.total
+    ok 1 - atrules.documents.total should not be larger than 0 (actual: 0)
+    1..1
+ok 4 - atrules.documents.total # time=1.464ms
+
+# Subtest: atrules.documents.totalUnique
+    ok 1 - atrules.documents.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 5 - atrules.documents.totalUnique # time=1.022ms
+
+# Subtest: atrules.documents.unique
+    ok 1 - should be equal
+    1..1
+ok 6 - atrules.documents.unique # time=1.329ms
+
+# Subtest: atrules.fontfaces.total
+    ok 1 - atrules.fontfaces.total should not be larger than 0 (actual: 0)
+    1..1
+ok 7 - atrules.fontfaces.total # time=1.089ms
+
+# Subtest: atrules.fontfaces.totalUnique
+    ok 1 - atrules.fontfaces.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 8 - atrules.fontfaces.totalUnique # time=1.128ms
+
+# Subtest: atrules.fontfaces.unique
+    ok 1 - should be equal
+    1..1
+ok 9 - atrules.fontfaces.unique # time=1.216ms
+
+# Subtest: atrules.imports.total
+    ok 1 - atrules.imports.total should not be larger than 0 (actual: 0)
+    1..1
+ok 10 - atrules.imports.total # time=1.243ms
+
+# Subtest: atrules.imports.totalUnique
+    ok 1 - atrules.imports.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 11 - atrules.imports.totalUnique # time=1.178ms
+
+# Subtest: atrules.imports.unique
+    ok 1 - should be equal
+    1..1
+ok 12 - atrules.imports.unique # time=1.048ms
+
+# Subtest: atrules.keyframes.total
+    ok 1 - atrules.keyframes.total should not be larger than 0 (actual: 0)
+    1..1
+ok 13 - atrules.keyframes.total # time=1.19ms
+
+# Subtest: atrules.keyframes.totalUnique
+    ok 1 - atrules.keyframes.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 14 - atrules.keyframes.totalUnique # time=1.033ms
+
+# Subtest: atrules.keyframes.unique
+    ok 1 - should be equal
+    1..1
+ok 15 - atrules.keyframes.unique # time=1.19ms
+
+# Subtest: atrules.mediaqueries.total
+    ok 1 - atrules.mediaqueries.total should not be larger than 0 (actual: 0)
+    1..1
+ok 16 - atrules.mediaqueries.total # time=1.118ms
+
+# Subtest: atrules.mediaqueries.totalUnique
+    ok 1 - atrules.mediaqueries.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 17 - atrules.mediaqueries.totalUnique # time=1.153ms
+
+# Subtest: atrules.mediaqueries.unique
+    ok 1 - should be equal
+    1..1
+ok 18 - atrules.mediaqueries.unique # time=0.984ms
+
+# Subtest: atrules.mediaqueries.browserhacks.total
+    ok 1 - atrules.mediaqueries.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 19 - atrules.mediaqueries.browserhacks.total # time=1.004ms
+
+# Subtest: atrules.mediaqueries.browserhacks.unique
+    ok 1 - should be equal
+    1..1
+ok 20 - atrules.mediaqueries.browserhacks.unique # time=1.152ms
+
+# Subtest: atrules.mediaqueries.browserhacks.totalUnique
+    ok 1 - atrules.mediaqueries.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 21 - atrules.mediaqueries.browserhacks.totalUnique # time=1.052ms
+
+# Subtest: atrules.namespaces.total
+    ok 1 - atrules.namespaces.total should not be larger than 0 (actual: 0)
+    1..1
+ok 22 - atrules.namespaces.total # time=1.591ms
+
+# Subtest: atrules.namespaces.totalUnique
+    ok 1 - atrules.namespaces.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 23 - atrules.namespaces.totalUnique # time=0.939ms
+
+# Subtest: atrules.namespaces.unique
+    ok 1 - should be equal
+    1..1
+ok 24 - atrules.namespaces.unique # time=1.212ms
+
+# Subtest: atrules.pages.total
+    ok 1 - atrules.pages.total should not be larger than 0 (actual: 0)
+    1..1
+ok 25 - atrules.pages.total # time=1.014ms
+
+# Subtest: atrules.pages.totalUnique
+    ok 1 - atrules.pages.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 26 - atrules.pages.totalUnique # time=1.043ms
+
+# Subtest: atrules.pages.unique
+    ok 1 - should be equal
+    1..1
+ok 27 - atrules.pages.unique # time=1.174ms
+
+# Subtest: atrules.supports.total
+    ok 1 - atrules.supports.total should not be larger than 0 (actual: 0)
+    1..1
+ok 28 - atrules.supports.total # time=1.06ms
+
+# Subtest: atrules.supports.totalUnique
+    ok 1 - atrules.supports.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 29 - atrules.supports.totalUnique # time=1.051ms
+
+# Subtest: atrules.supports.unique
+    ok 1 - should be equal
+    1..1
+ok 30 - atrules.supports.unique # time=0.978ms
+
+# Subtest: atrules.supports.browserhacks.total
+    ok 1 - atrules.supports.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 31 - atrules.supports.browserhacks.total # time=1.007ms
+
+# Subtest: atrules.supports.browserhacks.unique
+    ok 1 - should be equal
+    1..1
+ok 32 - atrules.supports.browserhacks.unique # time=1.01ms
+
+# Subtest: atrules.supports.browserhacks.totalUnique
+    ok 1 - atrules.supports.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 33 - atrules.supports.browserhacks.totalUnique # time=0.971ms
+
+# Subtest: declarations.importants.share
+    ok 1 - declarations.importants.share should not be larger than 0 (actual: 0)
+    1..1
+ok 34 - declarations.importants.share # time=1.049ms
+
+# Subtest: declarations.importants.total
+    ok 1 - declarations.importants.total should not be larger than 0 (actual: 0)
+    1..1
+ok 35 - declarations.importants.total # time=1.08ms
+
+# Subtest: declarations.total
+    ok 1 - declarations.total should not be larger than 1 (actual: 1)
+    1..1
+ok 36 - declarations.total # time=0.834ms
+
+# Subtest: declarations.totalUnique
+    ok 1 - declarations.totalUnique should not be larger than 1 (actual: 1)
+    1..1
+ok 37 - declarations.totalUnique # time=1.231ms
+
+# Subtest: properties.prefixed.share
+    ok 1 - properties.prefixed.share should not be larger than 0 (actual: 0)
+    1..1
+ok 38 - properties.prefixed.share # time=0.756ms
+
+# Subtest: properties.prefixed.total
+    ok 1 - properties.prefixed.total should not be larger than 0 (actual: 0)
+    1..1
+ok 39 - properties.prefixed.total # time=1.398ms
+
+# Subtest: properties.prefixed.totalUnique
+    ok 1 - properties.prefixed.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 40 - properties.prefixed.totalUnique # time=1.059ms
+
+# Subtest: properties.prefixed.unique
+    ok 1 - should be equal
+    1..1
+ok 41 - properties.prefixed.unique # time=0.654ms
+
+# Subtest: properties.browserhacks.total
+    ok 1 - properties.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 42 - properties.browserhacks.total # time=1.776ms
+
+# Subtest: properties.browserhacks.unique
+    ok 1 - should be equal
+    1..1
+ok 43 - properties.browserhacks.unique # time=0.673ms
+
+# Subtest: properties.browserhacks.totalUnique
+    ok 1 - properties.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 44 - properties.browserhacks.totalUnique # time=1.294ms
+
+# Subtest: properties.total
+    ok 1 - properties.total should not be larger than 1 (actual: 1)
+    1..1
+ok 45 - properties.total # time=0.611ms
+
+# Subtest: properties.totalUnique
+    ok 1 - properties.totalUnique should not be larger than 1 (actual: 1)
+    1..1
+ok 46 - properties.totalUnique # time=0.566ms
+
+# Subtest: properties.unique
+    ok 1 - should be equal
+    1..1
+ok 47 - properties.unique # time=0.836ms
+
+# Subtest: rules.total
+    ok 1 - rules.total should not be larger than 1 (actual: 1)
+    1..1
+ok 48 - rules.total # time=0.728ms
+
+# Subtest: rules.empty.total
+    ok 1 - rules.empty.total should not be larger than 0 (actual: 0)
+    1..1
+ok 49 - rules.empty.total # time=0.581ms
+
+# Subtest: selectors.accessibility.total
+    ok 1 - selectors.accessibility.total should not be larger than 0 (actual: 0)
+    1..1
+ok 50 - selectors.accessibility.total # time=0.569ms
+
+# Subtest: selectors.accessibility.totalUnique
+    ok 1 - selectors.accessibility.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 51 - selectors.accessibility.totalUnique # time=0.729ms
+
+# Subtest: selectors.accessibility.unique
+    ok 1 - should be equal
+    1..1
+ok 52 - selectors.accessibility.unique # time=0.591ms
+
+# Subtest: selectors.id.total
+    ok 1 - selectors.id.total should not be larger than 0 (actual: 0)
+    1..1
+ok 53 - selectors.id.total # time=0.576ms
+
+# Subtest: selectors.id.totalUnique
+    ok 1 - selectors.id.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 54 - selectors.id.totalUnique # time=0.654ms
+
+# Subtest: selectors.id.unique
+    ok 1 - should be equal
+    1..1
+ok 55 - selectors.id.unique # time=0.623ms
+
+# Subtest: selectors.identifiers.average
+    ok 1 - selectors.identifiers.average should not be larger than 1 (actual: 1)
+    1..1
+ok 56 - selectors.identifiers.average # time=1.277ms
+
+# Subtest: selectors.identifiers.max.count
+    ok 1 - selectors.identifiers.max.count should not be larger than 1 (actual: 1)
+    1..1
+ok 57 - selectors.identifiers.max.count # time=0.558ms
+
+# Subtest: selectors.identifiers.max.value
+    ok 1 - should be equal
+    1..1
+ok 58 - selectors.identifiers.max.value # time=0.532ms
+
+# Subtest: selectors.js.total
+    ok 1 - selectors.js.total should not be larger than 0 (actual: 0)
+    1..1
+ok 59 - selectors.js.total # time=0.527ms
+
+# Subtest: selectors.js.totalUnique
+    ok 1 - selectors.js.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 60 - selectors.js.totalUnique # time=0.579ms
+
+# Subtest: selectors.js.unique
+    ok 1 - should be equal
+    1..1
+ok 61 - selectors.js.unique # time=0.912ms
+
+# Subtest: selectors.total
+    ok 1 - selectors.total should not be larger than 1 (actual: 1)
+    1..1
+ok 62 - selectors.total # time=0.563ms
+
+# Subtest: selectors.totalUnique
+    ok 1 - selectors.totalUnique should not be larger than 1 (actual: 1)
+    1..1
+ok 63 - selectors.totalUnique # time=0.525ms
+
+# Subtest: selectors.universal.total
+    ok 1 - selectors.universal.total should not be larger than 0 (actual: 0)
+    1..1
+ok 64 - selectors.universal.total # time=1.207ms
+
+# Subtest: selectors.universal.totalUnique
+    ok 1 - selectors.universal.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 65 - selectors.universal.totalUnique # time=0.558ms
+
+# Subtest: selectors.universal.unique
+    ok 1 - should be equal
+    1..1
+ok 66 - selectors.universal.unique # time=2.598ms
+
+# Subtest: selectors.browserhacks.total
+    ok 1 - selectors.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 67 - selectors.browserhacks.total # time=0.907ms
+
+# Subtest: selectors.browserhacks.unique
+    ok 1 - should be equal
+    1..1
+ok 68 - selectors.browserhacks.unique # time=0.536ms
+
+# Subtest: selectors.browserhacks.totalUnique
+    ok 1 - selectors.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 69 - selectors.browserhacks.totalUnique # time=0.544ms
+
+# Subtest: stylesheets.cohesion.average
+    ok 1 - stylesheets.cohesion.average should not be larger than 1 (actual: 1)
+    1..1
+ok 70 - stylesheets.cohesion.average # time=0.916ms
+
+# Subtest: stylesheets.simplicity
+    ok 1 - stylesheets.simplicity should not be larger than 1 (actual: 1)
+    1..1
+ok 71 - stylesheets.simplicity # time=1.336ms
+
+# Subtest: stylesheets.size
+    ok 1 - stylesheets.size should not be larger than 23 (actual: 23)
+    1..1
+ok 72 - stylesheets.size # time=1.383ms
+
+# Subtest: stylesheets.browserhacks.total
+    ok 1 - stylesheets.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 73 - stylesheets.browserhacks.total # time=1.197ms
+
+# Subtest: stylesheets.browserhacks.totalUnique
+    ok 1 - stylesheets.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 74 - stylesheets.browserhacks.totalUnique # time=0.782ms
+
+# Subtest: values.browserhacks.total
+    ok 1 - values.browserhacks.total should not be larger than 0 (actual: 0)
+    1..1
+ok 75 - values.browserhacks.total # time=0.861ms
+
+# Subtest: values.browserhacks.unique
+    ok 1 - should be equal
+    1..1
+ok 76 - values.browserhacks.unique # time=0.892ms
+
+# Subtest: values.browserhacks.totalUnique
+    ok 1 - values.browserhacks.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 77 - values.browserhacks.totalUnique # time=1.763ms
+
+# Subtest: values.colors.total
+    ok 1 - values.colors.total should not be larger than 1 (actual: 1)
+    1..1
+ok 78 - values.colors.total # time=0.555ms
+
+# Subtest: values.colors.totalUnique
+    ok 1 - values.colors.totalUnique should not be larger than 1 (actual: 1)
+    1..1
+ok 79 - values.colors.totalUnique # time=0.486ms
+
+# Subtest: values.colors.unique
+    ok 1 - should be equal
+    1..1
+ok 80 - values.colors.unique # time=0.707ms
+
+# Subtest: values.colors.duplicates.total
+    ok 1 - values.colors.duplicates.total should not be larger than 0 (actual: 0)
+    1..1
+ok 81 - values.colors.duplicates.total # time=0.551ms
+
+# Subtest: values.colors.duplicates.totalUnique
+    ok 1 - values.colors.duplicates.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 82 - values.colors.duplicates.totalUnique # time=0.49ms
+
+# Subtest: values.colors.duplicates.unique
+    ok 1 - should be equal
+    1..1
+ok 83 - values.colors.duplicates.unique # time=0.476ms
+
+# Subtest: values.fontfamilies.total
+    ok 1 - values.fontfamilies.total should not be larger than 0 (actual: 0)
+    1..1
+ok 84 - values.fontfamilies.total # time=0.485ms
+
+# Subtest: values.fontfamilies.totalUnique
+    ok 1 - values.fontfamilies.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 85 - values.fontfamilies.totalUnique # time=0.612ms
+
+# Subtest: values.fontfamilies.unique
+    ok 1 - should be equal
+    1..1
+ok 86 - values.fontfamilies.unique # time=0.597ms
+
+# Subtest: values.fontsizes.total
+    ok 1 - values.fontsizes.total should not be larger than 0 (actual: 0)
+    1..1
+ok 87 - values.fontsizes.total # time=0.911ms
+
+# Subtest: values.fontsizes.totalUnique
+    ok 1 - values.fontsizes.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 88 - values.fontsizes.totalUnique # time=1.099ms
+
+# Subtest: values.fontsizes.unique
+    ok 1 - should be equal
+    1..1
+ok 89 - values.fontsizes.unique # time=0.899ms
+
+# Subtest: values.prefixed.share
+    ok 1 - values.prefixed.share should not be larger than 0 (actual: 0)
+    1..1
+ok 90 - values.prefixed.share # time=0.764ms
+
+# Subtest: values.prefixed.total
+    ok 1 - values.prefixed.total should not be larger than 0 (actual: 0)
+    1..1
+ok 91 - values.prefixed.total # time=0.55ms
+
+# Subtest: values.prefixed.totalUnique
+    ok 1 - values.prefixed.totalUnique should not be larger than 0 (actual: 0)
+    1..1
+ok 92 - values.prefixed.totalUnique # time=0.514ms
+
+# Subtest: values.prefixed.unique
+    ok 1 - should be equal
+    1..1
+ok 93 - values.prefixed.unique # time=0.575ms
+
+# Subtest: values.total
+    ok 1 - values.total should not be larger than 1 (actual: 1)
+    1..1
+ok 94 - values.total # time=0.567ms
+
+1..94
+# time=318.559ms
+✔ "Well I think we got away with that, eh pooch!"

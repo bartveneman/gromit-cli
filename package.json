@@ -2,7 +2,7 @@
   "name": "gromit-cli",
   "version": "1.3.1",
   "homepage": "https://www.projectwallace.com/oss",
-  "description": "A test framework to assert that CSS doesn't exceed provided thresholds.",
+  "description": "A test framework to assert that CSS statistics don't exceed provided thresholds.",
   "bin": {
     "gromit": "./cli.js"
   },
@@ -40,6 +40,7 @@
     "execa": "^1.0.0",
     "prettier": "^1.14.3",
     "semver": "^5.6.0",
+    "tap-parser": "^7.0.0",
     "xo": "^0.23.0"
   },
   "scripts": {
@@ -47,7 +48,10 @@
   },
   "xo": {
     "semicolon": false,
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "ava/no-import-test-files": "warn"
+    }
   },
   "prettier": {
     "useTabs": true,

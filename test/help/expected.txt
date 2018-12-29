@@ -1,0 +1,15 @@
+A test framework to assert that CSS statistics don't exceed provided thresholds.
+
+Usage
+			$ gromit <input>
+			$ <input> | gromit
+
+Options
+			--config, -c Set path to a Gromit config file (JSON)
+			--help Show this help
+			--version, -v Show the version number
+
+Examples
+			$ gromit style.css
+			$ gromit style.css --config /path/to/.gromitrc
+			$ cat style.css | gromit
