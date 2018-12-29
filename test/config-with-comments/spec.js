@@ -6,8 +6,6 @@ const execa = require('execa')
 const readFile = promisify(fs.readFile)
 
 test('it parses config with JSON comments without problems', async t => {
-	// read fixture config
-	// test happy path for thresholds and alternative
 	const [{code: exitCode, stdout: actual}, expected] = await Promise.all([
 		execa('../../cli.js', {
 			input: 'body {\n\tcolor: blue;\n}\n',
