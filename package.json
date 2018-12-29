@@ -48,7 +48,10 @@
   },
   "xo": {
     "semicolon": false,
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "ava/no-import-test-files": "warn"
+    }
   },
   "prettier": {
     "useTabs": true,

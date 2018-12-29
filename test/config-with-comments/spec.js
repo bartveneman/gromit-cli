@@ -2,11 +2,13 @@ const {promisify} = require('util')
 const fs = require('fs')
 const test = require('ava')
 const execa = require('execa')
+const {TEST_SUCCESS_CODE} = require('../../lib/exit-codes.js')
+const {normalizeTapOutput} = require('../utils.js')
 
 const readFile = promisify(fs.readFile)
 
 test('it parses config with JSON comments without problems', async t => {
-	const [{code: exitCode, stdout: actual}, expected] = await Promise.all([
+	const [{code, stdout}, expected] = await Promise.all([
 		execa('../../cli.js', {
 			input: 'body {\n\tcolor: blue;\n}\n',
 			cwd: __dirname
@@ -16,11 +18,7 @@ test('it parses config with JSON comments without problems', async t => {
 		})
 	])
 
-	expected
-		.split('\n')
-		.map(line => line.replace(/#.*|^✔.*|^✖.*/, '').trim())
-		.filter(line => line !== '')
-		.forEach(line => t.true(actual.includes(line)))
+	normalizeTapOutput(expected).forEach(line => t.true(stdout.includes(line)))
 
-	t.is(exitCode, 0)
+	t.is(code, TEST_SUCCESS_CODE)
 })

@@ -2,11 +2,17 @@ const {promisify} = require('util')
 const fs = require('fs')
 const test = require('ava')
 const execa = require('execa')
+const {
+	TEST_SUCCESS_CODE,
+	APPLICATION_ERROR_CODE
+} = require('../../lib/exit-codes.js')
+const {INVALID_OR_MISSING_CONFIG_FILE} = require('../../lib/messages.js')
+const {normalizeTapOutput} = require('../utils.js')
 
 const readFile = promisify(fs.readFile)
 
 test('it handles a custom config file correctly when a valid config path is given', async t => {
-	const [{code: exitCode, stdout: actual}, expected] = await Promise.all([
+	const [{code, stdout}, expected] = await Promise.all([
 		execa('./cli.js', ['--config=test/custom-config-file/config.json'], {
 			input: 'body {\n\tcolor: blue;\n}\n'
 		}),
@@ -15,17 +21,13 @@ test('it handles a custom config file correctly when a valid config path is give
 		})
 	])
 
-	expected
-		.split('\n')
-		.map(line => line.replace(/#.*|^✔.*|^✖.*/, '').trim())
-		.filter(line => line !== '')
-		.forEach(line => t.true(actual.includes(line)))
+	normalizeTapOutput(expected).forEach(line => t.true(stdout.includes(line)))
 
-	t.is(exitCode, 0)
+	t.is(code, TEST_SUCCESS_CODE)
 })
 
 test('it shows a helpful error message when the custom config file cannot be found', async t => {
-	const {code: exitCode, stdout: actual} = await t.throwsAsync(
+	const {code, stdout} = await t.throwsAsync(
 		execa(
 			'./cli.js',
 			['--config=test/custom-config-file/NON_EXISTENT_FILE.json'],
@@ -35,10 +37,6 @@ test('it shows a helpful error message when the custom config file cannot be fou
 		)
 	)
 
-	t.true(
-		actual.includes(
-			'Please provide a valid config file by creating a .gromitrc file or setting the path to a config file via the --config flag. \n\nDocs: https://github.com/bartveneman/gromit-cli#config-file'
-		)
-	)
-	t.is(exitCode, 2)
+	t.true(stdout.includes(INVALID_OR_MISSING_CONFIG_FILE))
+	t.is(code, APPLICATION_ERROR_CODE)
 })

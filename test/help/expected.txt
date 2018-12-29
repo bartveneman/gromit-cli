@@ -6,7 +6,7 @@ Usage
 
 Options
 			--config, -c Set path to a Gromit config file (JSON)
-			--help, -h Show this help
+			--help Show this help
 			--version, -v Show the version number
 
 Examples
