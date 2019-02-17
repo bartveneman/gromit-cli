@@ -57,7 +57,7 @@ const cli = meow(
 	}
 )
 
-updateNotifier({pkg: cli.pkg}).notify()
+updateNotifier({pkg: cli.pkg, shouldNotifyInNpmScript: true}).notify()
 
 // Read the file path from the CLI
 const [filePath] = cli.input
