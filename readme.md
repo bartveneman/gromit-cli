@@ -1,5 +1,7 @@
 # Gromit
 
+## ⛔️ This package is deprecated and no longer maintained. Please use [constyble](https://github.com/bartveneman/constyble ) instead.⛔️
+
 [![NPM Version](https://img.shields.io/npm/v/gromit-cli.svg)](https://www.npmjs.com/package/gromit-cli)
 [![Build Status](https://travis-ci.com/bartveneman/gromit-cli.svg?branch=master)](https://travis-ci.com/bartveneman/gromit-cli)
 [![Known Vulnerabilities](https://snyk.io/test/github/bartveneman/gromit-cli/badge.svg)](https://snyk.io/test/github/bartveneman/gromit-cli)
