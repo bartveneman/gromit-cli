@@ -6,6 +6,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 ![Dependencies Status](https://img.shields.io/david/bartveneman/gromit-cli.svg)
 ![Dependencies Status](https://img.shields.io/david/dev/bartveneman/gromit-cli.svg)
+[![Project: Wallace](https://img.shields.io/badge/Project-Wallace-29c87d.svg)](https://www.projectwallace.com/oss)
 
 A test framework to assert that CSS doesn't exceed provided thresholds.
 
